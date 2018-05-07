@@ -16,6 +16,7 @@
     flex-direction: row;
     margin: 0 auto;
     font-size: 80px;
+    font-family: 'Press Start 2P', cursive;
 }
 header{
     display: flex;
@@ -23,8 +24,12 @@ header{
 #arena {
     margin-top: 30px;
     width: 100%;
-    display: flex;
     height: 80vh;
+    text-align: center;
+    position: relative;
+}
+#arena > p {
+    font-family: 'Press Start 2P', cursive;
 }
 .circles {
     border: 1px solid black;
@@ -37,14 +42,95 @@ header{
     flex-direction: row;
     justify-content: center;
     position: relative;
-    top: 0px;
- 
+    flex-wrap: wrap;
+    display: inline-flex;
+    color: black;
+}
+#instructions{
+    display: block;
+    font-size: 22px;
+    width: 63%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.levelThree {
+    opacity: 50%;
+    animation: spin 2s 0s infinite linear;
+    font-size: 27px;
+    height: 43px;
+    width: 43px;
+    color: red;
+}
+.levelFive {
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    color: peru;
+}
+.levelEight{
+    animation: move 2s 0s infinite;
+    animation: shrink 3s 3s infinite;
+}
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes shrink{
+    0%{transform: scale(1.0);}
+    100%{transform: scale(2.0);}
+}
+@keyframes move{
+    0%, 100%{ top: 100px;}
+    25% {top: 50%;}
+}
+@keyframes moveTwo{
+    0%{left: 0px;}
+    100%{left: vh;}
+}
+@keyframes moveThree{
+    0%{right: 0px;}
+    100%{right: vh;}
+}
+@keyframes hide {
+    0%,100%{opacity: 1;}
+    50% {opacity:0;}
+}
+.levelSeven{
+    display: block;
+    border: 1px solid purple;
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    font-size: 58px; 
+    color: green;
+    animation: move 10s infinite;
+}
+.levelNine{
+    animation: hide 3s  infinite;
+}
+.levelTen {
+    width: 250px;
+    height: 250px;
+    font-size: 200px;
+    color: red;
+    font-weight: 900;
+    top: 500px;
+    left: 340px;
+    border: 5px black solid;
+}
+.lastLevel {
+    animation: moveTwo 2s 0s infinite;
+    color: yellow;
+}
+.lastLevelTwo{
+    animation: moveThree 2s 0s infinite;
 }
 .green {
     border: 3px solid green;
 }
 .red {
     border: 3px solid red;
-}
-
-
+};
